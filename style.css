@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --text-color: rgb(180, 212, 224);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    background-color: rgb(43, 79, 112);
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.score {
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--text-color);
+    line-height: 35px;
+}
+
+.score h2 {
+    font-size: 30px;
+}
+
+.score p {
+    text-align: center;
+    color: rgb(223, 219, 219);
+    font-size: 25px;
+}
+
+.intro {
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+.intro h1 {
+    color: var(--text-color);
+    font-size: 40px;
+}
+
+.intro button, .options button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    background-color:rgba(81, 212, 180, 0.733);
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 3px;
+}
+
+.match {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease 0.3s;
+}
+
+.match h2.winner {
+    color: var(--text-color);
+    font-size: 40px;
+    text-align: center;
+}
+
+.hands .player-hand {
+    transform: rotateY(180deg);
+}
+
+.hands, .options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fadeIn {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.play-again {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    background-color: rgba(14, 168, 130, 0.733);
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 3px;
+}
+
+.play-again1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 10000px rgb(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.play-again1:before {
+    content: 'Play again';
+    color: var(--text-color);
+    font-size: 25px;
+}
+
